@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+	<script src="mjq.js"></script>
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<script>
+		$(document).ready(function()
+		{
+			var content="";
+			var content1="";
+			$("button").click(function()
+			{
+				content=$("#myText").val();
+  			$.ajax({url:"https://freegeoip.app/json/"+content,async:false, success: function(result)
+  			{
+  					
+    				content1+="<p class='p1'> Country : "+result.country_name+"<br/> Region Code : "+result.region_code+"<br/> Region : "+result.region_name+"<br/> Zip Code : "+result.zip_code+"<br/> Time Zone : "+result.time_zone+"<br/> Latitude : "+result.latitude+"<br/> Longitude : "+result.longitude+"</p>";
+  			}});
+  			$(".mybox").append(content1);
+		});
+		});
+	</script>
+</head>
+<body>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 text-center h">
+          <h1>What's My Ip Location?</h1>
+      </div>
+		</div>
+		<div class="row m">
+			<div class="col-md-12">
+				<h3>Enter Your Ip Address</h3>
+				<input type="text" id="myText" placeholder="Ip Address">
+				<button>
+					Find Location
+				</button>
+				<div class="mybox">
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+.container-fluid{
+	margin-top: 0px;
+}
+
+.h{
+	font-family: 'Questrial', sans-serif;
+	background-color: #B1B3B3FF;
+  padding-top: 10px;
+  height: 60px;
+
+}
+.h h1{
+	color: white;
+  margin: 0px;
+
+}
+.m{
+	background-image: url("ip.png");
+	background-repeat: no-repeat;
+	height: 555px;
+}
+.m h3{
+	font-family: 'Questrial', sans-serif;
+	color: #00203FFF;
+
+}
+input[type=text] {
+  width: 20%;
+  padding: 8px 8px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #00203FFF;
+  border-radius: 0px;
+  box-sizing: border-box;
+  font-family: calibri;
+}
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+button {
+  background-color: #B1B3B3FF; 
+  color: #00203FFF; 
+  font-family: 'Questrial', sans-serif; 
+  
+}
+
+button:hover {
+  background-color: #B1B4B3FF;
+  color: white;
+}
+.p1{
+	font-family: 'Questrial', sans-serif;
+	font-size: 20px;
+
+}
+
